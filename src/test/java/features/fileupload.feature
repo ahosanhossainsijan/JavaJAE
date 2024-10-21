@@ -7,3 +7,5 @@ Feature: FileUpload
     And I click on Upload Button
     Then The File is Uploaded
     #1
+  #2
+  #3
