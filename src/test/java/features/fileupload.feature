@@ -6,3 +6,4 @@ Feature: FileUpload
     When I upload the 'teams.PNG' file
     And I click on Upload Button
     Then The File is Uploaded
+    #1
