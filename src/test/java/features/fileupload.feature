@@ -1,17 +1,7 @@
 Feature: FileUpload
-  Upload a File
   @tag1
   Scenario: Uploading a File
-    Given I will open the url and file uploader page is opned
-    When I upload the 'teams.PNG' file
-    And I click on Upload Button
-    Then The File is Uploaded
-    #1
-  #2
-  #3
-  #5
-  #6
-  #7
-  #8
-  #9
-  #10
+    Given I open the URL and the file uploader page is opened
+    When I upload the file "teams.PNG"
+      And I click on the Upload button
+    Then The file should be uploaded successfully
