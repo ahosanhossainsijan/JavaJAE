@@ -9,7 +9,7 @@ pipeline {
         stage('Clean') {
             steps {
                 script {
-                    bat 'mvn clean install'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -17,7 +17,7 @@ pipeline {
         stage('Compile') {
             steps {
                 script {
-                    bat 'mvn compile'
+                    sh 'mvn compile'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    bat 'mvn test'
+                    sh 'mvn test'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
         stage('Package') {
             steps {
                 script {
-                    bat 'mvn package'
+                    sh 'mvn package'
                 }
             }
         }
