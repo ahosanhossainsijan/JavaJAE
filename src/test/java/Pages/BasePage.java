@@ -1,27 +1,25 @@
 package Pages;
 
+import Hooks.BrowserHooks;
 import Utility.JsonUtil;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class BasePage
 {
     private By locator;
-    private WebDriver driver;
-    public BasePage(By locator, WebDriver driver)
+    public BasePage(By locator)
     {
         this.locator = locator;
-        this.driver = driver;
     }
 
     public void OpenUrl()
     {
-        driver.get(JsonUtil.getConfigData("url"));
+        BrowserHooks.driver.get(JsonUtil.getConfigData("url"));
     }
 
     public boolean IsPageOpned()
     {
-        return driver.findElements(locator).size()>0;
+        return BrowserHooks.driver.findElements(locator).size()>0;
 
     }
 
